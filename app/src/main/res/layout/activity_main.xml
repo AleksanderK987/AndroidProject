@@ -23,9 +23,9 @@
 
         <!-- Przycisk otwierający Drawer -->
         <Button
-            android:id="@id/open_drawer_button"
-            android:layout_width="94dp"
-            android:layout_height="45dp"
+            android:id="@+id/open_drawer_button"
+            android:layout_width="155dp"
+            android:layout_height="56dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Opcje"
