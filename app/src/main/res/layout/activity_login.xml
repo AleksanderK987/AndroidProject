@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     android:padding="16dp">
 
-    <!-- Tytuł -->
+    <!-- Tytuł - wyśrodkowany -->
     <TextView
         android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
         android:textSize="24sp"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"/>
 
     <!-- Pole e-mail -->
@@ -21,7 +22,6 @@
         android:layout_height="wrap_content"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:layout_below="@id/loginTitle"
         android:layout_marginBottom="16dp"/>
 
     <!-- Pole hasło -->
@@ -31,7 +31,6 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        android:layout_below="@id/emailEditText"
         android:layout_marginBottom="32dp"/>
 
     <!-- Przycisk logowania -->
@@ -39,8 +38,7 @@
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_below="@id/passwordEditText"
-        android:onClick="onLoginClicked"/>
+        android:text="Login"/>
 
-</RelativeLayout>
+</LinearLayout>
+    `
