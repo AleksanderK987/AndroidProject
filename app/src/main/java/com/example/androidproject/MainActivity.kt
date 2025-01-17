@@ -1,49 +1,46 @@
-package com.example.androidproject
+package com.example.myapp
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.androidproject.ui.theme.AndroidProjectTheme
+import android.view.MenuItem
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.example.androidproject.R
+import com.google.android.material.navigation.NavigationView
 
+class MainActivity : AppCompatActivity() {
 
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navigationView: NavigationView
 
-class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            AndroidProjectTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+        setContentView(R.layout.activity_main)
+
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navigationView = findViewById(R.id.navigation_view)
+
+        // Obsługuje kliknięcia w menu
+        navigationView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    // Przejdź do ekranu Home
+                }
+                R.id.nav_profile -> {
+                    // Przejdź do ekranu Profile
+                }
+                R.id.nav_settings -> {
+                    // Przejdź do ekranu Settings
                 }
             }
+            drawerLayout.closeDrawer(GravityCompat.START)  // Zamknięcie menu po kliknięciu
+            true
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AndroidProjectTheme {
-        Greeting("Android")
+        // Obsługuje przycisk otwierania menu
+        findViewById<View>(R.id.open_drawer_button).setOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
     }
 }
