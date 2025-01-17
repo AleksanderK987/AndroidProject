@@ -7,38 +7,47 @@
     android:padding="16dp">
 
     <!-- Tytuł - wyśrodkowany -->
+
+    <!-- Pole e-mail -->
+
+    <!-- Pole hasło -->
+
+    <!-- Przycisk logowania -->
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cdvlogo"/>
+    
     <TextView
         android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:text="Login"
-        android:textSize="24sp"
-        android:layout_marginBottom="32dp"/>
+        android:textSize="24sp" />
 
-    <!-- Pole e-mail -->
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:inputType="textEmailAddress" />
 
-    <!-- Pole hasło -->
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:hint="Password"
-        android:inputType="textPassword"
-        android:layout_marginBottom="32dp"/>
+        android:inputType="textPassword" />
 
-    <!-- Przycisk logowania -->
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"/>
+        android:text="Login" />
 
 </LinearLayout>
-    `
