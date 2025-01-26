@@ -4,37 +4,32 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@android:color/darker_gray">
+    android:background="@color/niebieski_cdv">
 
-    <!-- Obrazek użytkownika -->
     <ImageView
-        android:contentDescription="@string/userimg"
-        android:id="@+id/nav_header_image"
-        android:layout_width="77dp"
-        android:layout_height="75dp"
+        android:id="@+id/userImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_user_placeholder" />
+        android:src="@drawable/ic_user_placeholder"
+        android:contentDescription="User Image" />
 
-    <!-- Imię użytkownika -->
     <TextView
-        android:id="@+id/nav_header_name"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="User Name"
+        android:text="Jan Kowalski"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 
-    <!-- E-mail użytkownika -->
     <TextView
-        android:id="@+id/nav_header_email"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="4dp"
+        android:id="@+id/userEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="user@example.com"
+        android:text="kowalski@edu.cdv.pl"
         android:textColor="@android:color/white"
         android:textSize="14sp" />
-
 </LinearLayout>

@@ -13,8 +13,10 @@
     <color name="ciemnoszary_cdv">#3C3C3C</color>
     <color name="zolty_cdv">#FBCD28</color>
 
-    <style name="Theme.AndroidProject" parent="android:Theme.Material.Light.NoActionBar" />
-
     <string name="app_name">AndroidProject</string>
     <string name="userimg">UserIMG</string>
+    <string name="login">Login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
 </resources>

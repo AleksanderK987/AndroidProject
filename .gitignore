@@ -22,3 +22,33 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Ignorowanie plików build
+/build
+/captures
+/outputs
+*.apk
+*.ap_
+*.dex
+
+# Ignorowanie plików Android Studio
+.idea/
+*.iml
+
+# Ignorowanie plików gradle
+.gradle/
+build/
+
+# Ignorowanie plików lokalnych ustawień
+local.properties
+
+# Ignorowanie plików tymczasowych systemu
+.DS_Store
+Thumbs.db
+
+# Ignorowanie plików binarnych
+*.bin
+
+*.java
+*.lock
+
