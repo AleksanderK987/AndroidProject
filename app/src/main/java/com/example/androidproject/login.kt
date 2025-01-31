@@ -22,8 +22,8 @@ class LoginActivity : AppCompatActivity() {
 
             // Sprawdzanie loginu i hasła
             if (email == "admin" && password == "admin") {
-                // Jeśli dane są poprawne, przejdź do MainActivity
-                val intent = Intent(this, MainActivity::class.java)
+                // Jeśli dane są poprawne, przejdź do Planu zajęć
+                val intent = Intent(this, ScheduleActivity::class.java)
                 startActivity(intent)
                 finish() // Zakończenie LoginActivity, aby nie wrócić do niego po naciśnięciu przycisku "wstecz"
             } else {
